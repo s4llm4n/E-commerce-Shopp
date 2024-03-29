@@ -290,7 +290,90 @@ shadow hidden" id="mobileMenu">
 
 
 <!-- PRODUCT VIEW -->
+<div class="container pt-4 pb-6 grid lg:grid-cols-2 gap-6">
+    <!-- Product Image -->
+    <div>
+        <div>
+            <img id="main-img" src="/images/product/product12.jpg" class="w-full"/>
+        </div>
 
+        <div class="grid grid-cols-5 gap-4 mt-4">
+
+            <div>
+                <img src="/images/product/product12.jpg" class="single-img 
+                w-full cursor-pointer border border-primary"/>
+            </div>
+
+            
+            <div>
+                <img src="/images/product/product3.jpg" class="single-img 
+                w-full cursor-pointer border "/>
+            </div>
+
+            
+            <div>
+                <img src="/images/product/product4.jpg" class="single-img 
+                w-full cursor-pointer border "/>
+            </div>
+
+            
+            <div>
+                <img src="/images/product/product8.jpg" class="single-img 
+                w-full cursor-pointer border "/>
+            </div>
+
+            
+            <div>
+                <img src="/images/product/product7.jpg" class="single-img 
+                w-full cursor-pointer border"/>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Image -->
+
+
+    <!-- Product Content -->
+
+    <div>
+        <h2 class="md:text-3xl text-2xl font-medium uppercase mb-2"
+        >ITALIAN L SHAPE SOFA</h2>
+        <div class="flex items-center mb-4">
+            <div class="flex gap-1 text-sm text-yellow-400">
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+            </div>
+            <div class="text-xs text-gray-500 ml-3">(150 Reviews)</div>
+        </div>
+
+        <div class="space-y-2">
+            <p class="text-gray-800 font-semibold space-x-2">
+                <span>Availability : </span>
+                <span class="text-green-600">In Stock </span>
+            </p>
+
+            <p class="text-gray-800 font-semibold space-x-2">
+                <span>Brand : </span>
+                <span class="text-gray-600">In Stock </span>
+            </p>
+
+            <p class="text-gray-800 font-semibold space-x-2">
+                <span>Category : </span>
+                <span class="text-gray-600">Sofa </span>
+            </p>
+
+            <p class="text-gray-800 font-semibold space-x-2">
+                <span>SKU : </span>
+                <span class="text-gray-600">AKHASFD34 </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- End Product Content -->
+
+</div>
 
 
 <!-- END PRODUCT VIEW -->
@@ -452,6 +535,29 @@ shadow hidden" id="mobileMenu">
     
 
     <!-- END FOOTER -->
+
+
+<script>
+    let mainImg = document.getElementById('main-img')
+    let imgBars = document.getElementsByClassName('single-img')
+
+    for(let imgBar of imgBars){
+        imgBar.addEventListener('click', function() {
+            clearActive()
+            let imgPath = this.getAttribute('src') 
+            mainImg.setAttribute('src',imgPath) 
+            this.classList.add('border-primary')
+        })
+    }
+
+    function clearActive() {
+        for(let imgBar of imgBars){
+            imgBar.classList.remove('border-primary')
+        }
+    }
+
+</script>   
+
 
 
 <script>
